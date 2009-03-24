@@ -11,6 +11,8 @@ For a full description of the module, visit the project page:
 To submit bug reports and feature suggestions, or to track changes:
   http://drupal.org/project/issues/htpasswdsync
 
+The way password are encrypted it only compatible with *nix version of Apache.
+
 
 -- REQUIREMENTS --
 
