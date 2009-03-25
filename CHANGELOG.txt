@@ -1,0 +1,6 @@
+$Id$
+
+v1.1-Dev bug fix release
+Fixed #409406 by fasdalf@fasdalf.ru : remove comma in htgroup file
+
+v1.0 Initial release
