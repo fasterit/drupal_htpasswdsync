@@ -39,6 +39,17 @@ installed before any user creation.
   - htgroup file
   
     The file that will synchronize the roles.
+    
+  - password hashing algorythm
+    
+    Let you choose how the password is encrypted/hashed. There are two options
+    crypt and SHA-1.
+    Crypt works only on Un*x platforms. SHA-1 shall work on bother Windows 
+    based systems and Un*xes.
+    
+    WARNING: changing this value only change the way new or updated password.
+             You will need to request you users to all change their password
+             if you want to migrate from only hash to another.
 
   - roles
   
