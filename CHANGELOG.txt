@@ -1,5 +1,8 @@
 $Id$
 
+Fixed #588208 by ikogan : username shall not contain colon
+
+
 v1.3 bug fix release
 Fixed #588208 by ikogan : username with t are concidered invalid
 
