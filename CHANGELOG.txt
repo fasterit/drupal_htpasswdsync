@@ -2,6 +2,9 @@ $Id$
 
 Fixed #588208 by ikogan : username shall not contain colon
 
+v1.4 bug fix release
+Fixed #588208 by ikogan : fixed the colon detection
+Fixed #611020 by fasdalf@fasdalf.ru : group file not updated when adding user
 
 v1.3 bug fix release
 Fixed #588208 by ikogan : username with t are concidered invalid
