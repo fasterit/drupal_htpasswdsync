@@ -1,4 +1,3 @@
-$Id$
 
 Fixed #588208 by ikogan : username shall not contain colon
 
