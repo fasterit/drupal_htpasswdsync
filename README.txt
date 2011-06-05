@@ -1,8 +1,7 @@
-
 -- SUMMARY --
 
-The HTPasswd Sync module let you synchronize a htpasswd and a
-htgroup file with the user database.
+The HTPasswd Sync module let you synchronize a htpasswd and a htgroup file with
+the user database.
 
 For a full description of the module, visit the project page:
   http://drupal.org/project/htpasswdsync
@@ -38,7 +37,7 @@ properly cleaned up.
   
     The file that will synchronize the roles.
     
-  - password hashing algorythm
+  - password hashing algorithm
     
     Let you choose how the password is encrypted/hashed. There are two options
     crypt and SHA-1.
