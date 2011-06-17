@@ -1,3 +1,2 @@
-$Id: CHANGELOG.txt,v 1.0.0 2011/06/01 00:08:53 stfwi Exp $
 
 v1.0 Initial release for DP7

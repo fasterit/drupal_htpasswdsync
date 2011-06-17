@@ -73,3 +73,4 @@ None.
 
 Current maintainers:
 * Marc Furrer (m.fu) - http://drupal.org/user/310415
+* Stefan Wilhelm (7.x-xx) - http://drupal.org/user/1344522
