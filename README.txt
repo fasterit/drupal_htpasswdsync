@@ -8,10 +8,10 @@ We have applied patches and improved over the module hosted on drupal.org.
 This version supports secure (salted) SHA-256-crypt and SHA-512-crypt password
 storage.
 
-Pleas be aware that SHA-512-crypt hashes are larger than the 64 bytes the
+Please be aware that SHA-512-crypt hashes are larger than the 64 bytes the
 original authors of this module specified. So if you are upgrading from a
-previous version and not re-installing new, please execute the following
-in MySQL:
+previous version and not (re-)installing the module, please execute the
+following in MySQL:
 
   use drupal7; # or whatever your Drupal database is
   alter table htpasswdsync_htpasswd modify passwd varchar(128);
@@ -31,7 +31,7 @@ To submit bug reports and feature suggestions, or to track changes:
 
 -- REQUIREMENTS --
 
-The syncrhonization only happen on password change. Hence, this module shall be 
+The synchronization only happen on password change. Hence, this module shall be 
 installed before any user creation.
 
 You need to run the cron.php job on a regular basis to ensure old users are 
@@ -51,7 +51,10 @@ properly cleaned up.
   - htpasswd file
     
     The file that will contain users and password, password are crypted, using
-    the standard crypt function, with a random two charaters seed.
+    the standard (insecure) crypt function, with a random two characters seed,
+    or - specific to this version of the module - with SHA-256 or SHA-512
+    salted hashes that are compatible with more modern Linux crypt
+    implementations.
 
   - htgroup file
   
@@ -59,14 +62,15 @@ properly cleaned up.
     
   - password hashing algorithm
     
-    Let you choose how the password is encrypted/hashed. There are two options
-    crypt and SHA-1.
-    Crypt works only on Un*x platforms. SHA-1 shall work on bother Windows 
-    based systems and Un*xes.
+    Let you choose how the password is encrypted/hashed. There are four options
+    crypt and SHA-1 (insecure), SHA-256-crypt (good) and SHA-512-crypt (secure).
+    Crypt works only on Un*x platforms. SHA-1 shall work on both Windows 
+    based systems and Un*xes. The SHA-256/512-crypt versions should work on
+    any PHP >= v5.5.
     
-    WARNING: changing this value only change the way new or updated password
+    WARNING: changing this value only changes the way new or updated passwords
              are hashed.
-             You will need to request you users to all change their password
+             You will need to request your users to all change their password
              if you want to migrate from one hash to another.
 
   - roles
@@ -75,7 +79,7 @@ properly cleaned up.
 
   - overwrite
   
-    Activate if you want to overwrite your htpassword file. I left inactive
+    Activate if you want to overwrite your htpasswd file. I left inactive
     htpasswdsync will try its best to keep old entries, but will only try.
     
 -- CUSTOMIZATION --
