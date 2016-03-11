@@ -1,2 +1,4 @@
+v1.1 Support SHA-256-crypt and SHA-512-crypt hashes
+     See git log for other changes / patches applied
 
 v1.0 Initial release for DP7

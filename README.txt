@@ -5,7 +5,18 @@ Mirrored at https://github.com/fasterit/drupal_htpasswdsync
 
 This is the Faster IT version of the htpasswdsync module for Drupal 7.
 We have applied patches and improved over the module hosted on drupal.org.
-Please review the git log for details.
+This version supports secure (salted) SHA-256-crypt and SHA-512-crypt password
+storage.
+
+Pleas be aware that SHA-512-crypt hashes are larger than the 64 bytes the
+original authors of this module specified. So if you are upgrading from a
+previous version and not re-installing new, please execute the following
+in MySQL:
+
+  use drupal7; # or whatever your Drupal database is
+  alter table htpasswdsync_htpasswd modify passwd varchar(128);
+
+For an overview of other changes please review the git log.
 
 -- SUMMARY --
 
