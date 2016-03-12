@@ -1,3 +1,6 @@
+v1.2 Enable or disable curly braces password prefix like {SHA512-crypt}
+     Dovecot introduced the prefix, htpasswd from nginx doesn't understand it
+
 v1.1 Support SHA-256-crypt and SHA-512-crypt hashes
      See git log for other changes / patches applied
 
